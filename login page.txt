@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <h1 align="center"> WELCOME TO PATIL DAIRY </h1>
+    <h2 align="center">Login Page</h2>
+    <style>
+        #p1 
+        {
+            padding:20px;
+            background-color:lightgray;
+            font-size:20px;
+        }
+        h1{
+            background-color: aqua;
+        }
+        body{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body >
+    <form action="bill page.html">
+    <table align="center" id="p1">
+        <tr>
+            <td>User Name:</td>
+            <td><input type="email" name="email" required="required" /></td></tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password" required="required" /></td>
+        </tr>
+        <tr>
+        <td><button type="submit" name="login">Login</button></td>
+        <td><button type="reset" name="reset">Reset</button></td>
+        </tr>
+    </table>
+        </form>
+    </body>
+</html>

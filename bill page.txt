@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Dairy Page</title>
+    <h1>DETAILS</h1>
+    <link rel="stylesheet" href="billstyle.css" />
+    <style>
+        table 
+        {
+            display:none;
+        }
+    </style>
+</head>
+<body> 
+    <form id="color">
+        
+        <label for="Date">Date:</label>
+        <input type="date" id="date" />
+        <pre></pre>
+        <label for="Time">Time:</label>
+        <input type="time" id="time" />
+        <pre></pre>
+        <label for="Bill Id">Bill Id:</label>15
+        <pre></pre>
+
+        <label for="CustomerId">Customer Id:</label>
+        <input type="text" id="CustomerId"/>
+        
+
+        <label for="CattleType">CattleType:</label>
+        <select id="CattleType">
+            <option>Select</option>
+            <option>Cow</option>
+            <option>Baffalo</option>
+        </select>
+
+        <label for="FAT">FAT:</label>
+        <input type="text" id="FAT" />
+        
+        <label for="Rate">Rate:</label>
+        <select id="Rate">
+            <option>Select Rate</option>
+            <option>Cow Milk Rate:30</option>
+            <option>Baffalo Milk Rate:70</option>
+        </select>
+        <pre></pre>
+        <label for="Customername">Customer Name:</label>
+        <input type="text" id="CustomerName" />
+
+        <label for="Litter in Milk">Litterin Milk:</label>
+        <input type="text" id="LitterinMilk" />
+        
+        
+        <label for="SNF">SNF:</label>
+        <input type="text" id="SNF"/> <pre></pre>
+
+        <label for="Total Amt">Total Amt:</label>
+        <input type="text" id="TotalAmt" />
+        
+
+        <label for="Contact No">Contact No:</label>
+        <input type="text" id="ContactNo" />
+
+        <label for="Address">Address:</label>
+        <input type="text" id="Address" />
+        <pre></pre>
+        
+        <input type="button" id="submit" value="ADD" />
+        <input type="reset" id="Update" value="Reset" />
+        <input type="search" id="search" placeholder="search"/><pre></pre>
+    </form>
+    <table id="table" border="1" style="width:600px; height:auto;">
+        <h1>BILL PAGE</h1>
+        <tr>
+            <th>Customer Id</th>
+            <th>Cattle type</th>
+            <th>Customer Name</th>
+            <th>Litter in Milk</th>
+            <th>Total amt</th>
+            <th>Contact No.</th>
+            <th>Address</th>
+            <th id="edit">Edit</th>
+            <th id="delete">Delete</th>
+        </tr>
+       </table>
+    <script type="text/javascript">
+        
+        document.getElementById("submit").onclick = function ()
+        {
+            document.getElementById("table").style.display = "block";
+
+            var table = document.getElementById("table");
+            var row = table.insertRow(-1);
+            var CustomerId = row.insertCell(0);
+            var Cattletype = row.insertCell(1);
+            var Customername = row.insertCell(2);
+            var LitterinMilk = row.insertCell(3);
+            var Totalamt = row.insertCell(4);
+            var Contact = row.insertCell(5);       
+            var Address = row.insertCell(6);
+            var Edit = row.insertCell(7);
+            var Delete=row.insertCell(8);
+
+
+            CustomerId.innerHTML = document.getElementById("CustomerId").value;
+            Cattletype.innerHTML = document.getElementById("CattleType").value;
+            Customername.innerHTML = document.getElementById("CustomerName").value;
+            LitterinMilk.innerHTML = document.getElementById("LitterinMilk").value;
+            Totalamt.innerHTML = document.getElementById("TotalAmt").value;
+            Contact.innerHTML = document.getElementById("ContactNo").value;  
+            Address.innerHTML = document.getElementById("Address").value;
+            Edit.innerHTML = `<a href="#" onClick='onEdit(this)' class='btn-sm btn-success'>Edit</a>`;
+            Delete.innerHTML=`<a href="#" onClick='onDelete(this)' class='btn-sm btn-danger'>delete</a>`;
+            
+
+            return false;
+        }
+
+    </script>
+</body>
+</html>
